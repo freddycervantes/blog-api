@@ -1,7 +1,7 @@
 'use strict';
 export default (sequelize, DataTypes) => {
   const Comment = sequelize.define('Comment', {
-    article_id: {
+    articleId: {
       type:DataTypes.INTEGER,
       allowNull: {
         args: false,
@@ -47,7 +47,7 @@ export default (sequelize, DataTypes) => {
   Comment.associate = (models) => {
     // associations can be defined here
     Comment.belongsTo(models.Article, {
-      foreignKey: 'article_id',
+      foreignKey: 'articleId',
       onDelete: 'CASCADE'
     });
   };

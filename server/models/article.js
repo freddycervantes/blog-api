@@ -46,7 +46,7 @@ export default (sequelize, DataTypes) => {
       }
     },
     status: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: {
         args: false,
         msg: 'Please specify and article topic'
@@ -56,7 +56,7 @@ export default (sequelize, DataTypes) => {
   Article.associate = (models) => {
     // associations can be defined here
     Article.hasMany(models.Comment, {
-      foreignKey: 'article_id',
+      foreignKey: 'articleId',
     });
   };
   return Article;
