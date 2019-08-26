@@ -47,7 +47,7 @@ export default (sequelize, DataTypes) => {
   Comment.associate = (models) => {
     // associations can be defined here
     Comment.belongsTo(models.Article, {
-      foreignKey: 'bookId',
+      foreignKey: 'article_id',
       onDelete: 'CASCADE'
     });
   };
