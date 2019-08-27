@@ -55,13 +55,13 @@ class Comments {
             .then(comment => {
                 if(!comment) {
                     return res.status(400).send({
-                        message: 'Book Not Found',
+                        message: 'Comment Not Found',
                     });
                 }
                 return comment
                     .destroy()
                     .then(() => res.status(200).send({
-                        message: 'Book successfully deleted'
+                        message: 'Comment successfully deleted'
                     }))
                     .catch(error => res.status(400).send(error));
             })
